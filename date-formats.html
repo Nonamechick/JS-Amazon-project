@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date Format</title>
+        <style>
+            body {
+                background-color: antiquewhite;
+                color: darkslategray;
+                padding: 1rem;
+                margin: 1rem;
+                border: 5px solid rebeccapurple;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>JS ISO Dates</h2>
+        <p id="1"></p>
+        <h2>Separate date and time with a capital T.</h2>
+        <p>Indicate UTC time with a capital Z</p>
+        <p id="2"></p>
+        <h2>JS new Date()</h2>
+        <p id="3"></p>
+        <h2>New</h2>
+        <p id="4"></p>
+        <h2>JS Date.parse()</h2>
+        <p>Date.parse() returns the number of milliseconds between the date and January 1, 1970:</p>
+        <p id="5"></p>
+        <p id="6"></p>
+        <h2>JS Date.parse()</h2>
+        <p>Date.parse(string) returns millliseconds</p>
+        <p>You can use the return value to convert the string to a date objcect</p>
+        <p id="7"></p>
+
+        <script>
+            const d = new Date("2007-09-25");
+            document.getElementById("1").innerHTML = d;
+            const o = new Date("2007-09-30T12:00:00Z");
+            document.getElementById("2").innerHTML = o;
+            const p = new Date("03/25/2000");
+            document.getElementById("3").innerHTML = p;
+            const i = new Date("Mar 25 2015");
+            document.getElementById("4").innerHTML = i;
+
+            
+            const msec = Date.parse("March 21, 2012");
+            document.getElementById("5").innerHTML = msec;
+            const m = Date.parse("March 12, 2011");
+            document.getElementById("6").innerHTML = m;
+            let k = Date.parse("March 24, 2014");
+            const g = new Date();
+            document.getElementById("7").innerHTML = g;
+        </script>
+    </body>
+</html>

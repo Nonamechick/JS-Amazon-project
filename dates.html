@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Dates
+        </title>
+        <style>
+            body {
+                background-color: azure;
+                color: black;
+                padding: 1rem;
+                margin: 1rem;
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Dates</h1>
+        <h2>Using new Date()</h2>
+        <p>new Date() without arguments, creates a date object with the current date and time:</p>
+        <p id="1"></p>
+        <h2>Divide</h2>
+        <p>A date object can be created with a specified date and time:</p>
+        <p id="2"></p>
+        <h2>New</h2>
+        <p id="3"></p>
+        <h2>JS new Date()</h2>
+        <p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+        <p id="4"></p>
+        <h2>Specifiying a month higher than 11, will not result in an error but add the overflow to the text year:</h2>
+        <p id="5"></p>
+        <h2>10000000000000 milliseconds from January 01 1970 UTC is</h2>
+        <p id="6"></p>
+        <h2>The toString() Method</h2>
+        <p>Convert a date to a string</p>
+        <p id="7"></p>
+        <h2>The toDateString() Method</h2>
+        <p>Convert a date to a date string</p>
+        <p id="8"></p>
+        <h2>The toUTCString() Method</h2>
+        <p>Convert a date to a string using the UTC standard</p>
+        <p id="9"></p>
+        <h2>The toISOString() Method</h2>
+        <p>Convert a date to a string using the ISO standard</p>
+        <p id="10"></p>
+
+
+        <script>
+            const d = new Date();
+            document.getElementById("1").innerHTML = d;
+            const t = new Date("September 11, 2001 10:11:00");
+            document.getElementById("2").innerHTML = t; 
+            const o = Date("2022-03-25");
+            document.getElementById("3").innerHTML = o;
+            const y = new Date(2018, 11, 24, 10, 33, 30, 0);
+            document.getElementById("4").innerHTML = y;
+            const q = new Date(2018, 15, 24, 10, 33, 30, 0);
+            document.getElementById("5").innerHTML = q;
+            const p = new Date(1000000000000);
+            document.getElementById("6").innerHTML = p;
+            document.getElementById("7").innerHTML = d.toString();
+            document.getElementById("8").innerHTML = d.toDateString();
+            document.getElementById("9").innerHTML = d.toUTCString();
+            document.getElementById("10").innerHTML = d.toISOString();
+        </script>
+    </body>
+</html>

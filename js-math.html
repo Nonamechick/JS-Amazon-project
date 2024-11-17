@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Math</title>
+        <style>
+            body {
+                background-color: azure;
+                color: black;
+                padding: 1rem;
+                margin: 1rem;
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Math Constants</h1>
+        <p id="1"></p>
+        <h2>JS Math.round()</h2>
+        <p>Math.round(x) returns the value of x rounded to its nearest integer</p>
+        <P id="2"></P>
+        <h2>JS Math.ceil()</h2>
+        <p>Math.ceil() rounds a number <strong>up</strong> to its nearest integer:</p>
+        <p id="3"></p>
+        <h2>JS Math.floor()</h2>
+        <p>Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer:</p>
+        <p id="4"></p>
+        <h2>JS Math.trunc()</h2>
+        <p>Math.trunc() returns the integer part of x:</p>
+        <p id="5"></p>
+        <h2>JS Math.sign()</h2>
+        <p>Math.sign() returns if x is negative, null or positive:</p>
+        <p id="6"></p>
+        <h2>JS Math.pow()</h2>
+        <p>Math.pow(x,y) returns the value of x to the power of y </p>
+        <p id="7"></p>
+        <h2>JS Math.sqrt()</h2>
+        <p>Math.sqrt() returns the square root of x:</p>
+        <p id="8"></p>
+        <h2>JS Math.abs()</h2>
+        <p>Math.abs() returns the absolute (positive) value of x:</p>
+        <p id="9"></p>
+        <h2>JS Math.sin()</h2>
+        <p>Math.sin(x) returns the sin of x (given in radians)</p>
+        <p>Angle in radians = (angle in degrees) * PI / 180</p>
+        <p id="10"></p>
+        <h2>JS Math.cos()</h2>
+        <p>Math.cos() returns the cosine of x (given in radians):</p>
+        <p>Angle in radians = (angle in degrees) * PI / 180</p>
+        <p id="11"></p>
+        <h2>JS Math.min()</h2>
+        <p>Math.min() returns the lowest value in a list of arguments</p>
+        <p id="12"></p>
+        <h2>JS Math.max()</h2>
+        <p>Math.max() returns the highest value in a list of arguments </p>
+        <p id="13"></p>
+        <h2>JS Math.random()</h2>
+        <p>Math.random() returns a random number between 0 and 1:</p>
+        <p id="14"></p>
+        <p>Tip: Click on "Run" several times</p>
+        <h2>JS Math.log()</h2>
+        <p>Math.log() returns the natural log of a number </p>
+        <p id="15"></p>
+        <h2>JS Math.log10()</h2>
+        <p>Math.log10() returns the base 10 logarithm of a number</p>
+        <p>How many times must we multiply to get 1000</p>
+        <p id="16"></p>
+        <h2>JS Math.random()</h2>
+        <p>Math.floor(Math.random() * 10) returns a random int between 0 and 9 (both included)</p>
+        <p id="17"></p>
+        <h2>JS Math.random()</h2>
+        <p>Every time you click the button, getRndInteger(min, max) returns a random number between 0 and 9 (both included)</p>
+        <button onclick="document.getElementById('18').innerHTML = getRndInteger(0,10)">Click me</button>
+        <p id="18"></p>
+        <h2>JS  Math</h2>
+        <p>Math.floor(Math.random() * 100) returns a random integer between 0 and 99  (both included) </p>
+        <p id="19"></p>
+
+        <script>
+            document.getElementById("1").innerHTML = "<p><b>Math.E:</b> " + Math.E + "</p>" + "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+            "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" + "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" + "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" + "<p><b>Math.LN10:</b> " + Math.LN10 + "</p> " + "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p> " + "<p><b>Math.LOG10E:</b> " + Math.LOG10E + "</p> "; 
+            document.getElementById("2").innerHTML = Math.round(4.2);
+            document.getElementById("3").innerHTML = Math.ceil(4.5);
+            document.getElementById("4").innerHTML = Math.floor(4.7);
+            document.getElementById("5").innerHTML = Math.trunc(4.9);
+            document.getElementById("6").innerHTML = Math.sign(4); 
+            document.getElementById("7").innerHTML = Math.pow(8,2);
+            document.getElementById("8").innerHTML = Math.sqrt(64);
+            document.getElementById("9").innerHTML = Math.abs(-4.7);
+            document.getElementById("10").innerHTML = "The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+            document.getElementById("11").innerHTML = "The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+            document.getElementById("12").innerHTML = Math.min(0 ,1 , 32,3423,323,23,5,-21);
+            document.getElementById("13").innerHTML = Math.max(0,23,23,32,3,32232,2323,212324);
+            document.getElementById("14").innerHTML = Math.random();
+            document.getElementById("15").innerHTML = Math.log(5);
+            document.getElementById("16").innerHTML = Math.log10(100000);
+            document.getElementById("17").innerHTML= Math.floor(Math.random() * 10);
+            function  getRndInteger(min, max)  {
+                return Math.floor(Math.random() * (max - min )) + min;
+            }
+            document.getElementById("20").innerHTML = Math.floor(Math.random() * 100);
+        </script>
+    </body>
+</html>

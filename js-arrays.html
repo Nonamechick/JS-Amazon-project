@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Arrays</title>
+        <style>body {background-color: azure; padding: 100px; border-radius: 5px; border: 1em solid black; margin: 1em;}</style>
+    </head>
+    <body>
+        <h1>JS Arrays</h1>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <h2>Bracket Indexing</h2>
+        <p>JS arrays elements are accessed using numeric indexes (starting from 0)</p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <h2>The toString() Method</h2>
+        <p id="demo6"></p>
+        <p>Array use numbers to access its elements.</p>
+        <p id="demo7"></p>
+        <h2>The length Property</h2>
+        <p>The length property returns the length of an array:</p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        <h2>Looping an Array</h2>
+        <p id="demo10"></p>
+        <h2>The forEach() Method</h2>
+        <p>Call a function for each array element:</p>
+        <p id="demo11"></p>
+        <h2>The push() Method</h2>
+        <p>The push method appends a new element to an array.</p>
+        <button onclick="myFunctions()">PUsh me</button>
+        <p id="demox"></p>
+        <p>Adding elements with high indexes can create undefined "holes" in an array</p>
+        <p id="demo12"></p>
+        <h2>The typeof Operator</h2>
+        <p id="demo13"></p>
+        <h2>The isArray() Method</h2>
+        <p id="demo14"></p>
+        <h2>The instanceof Operator</h2>
+        <p>The instanceof operator returns true if an object is an instance of a specified object type:</p>
+        <p id="demo15"></p>
+        <h2>Nested JS Objects and arrays.</h2>
+        <p id="demo16"></p>
+        <script>
+            const cars = ["Mer", "Ferr","Lam"];
+            const cars1 = [
+                "Saab",
+                "Volvo",
+                "BMW"
+            ];
+            const cars2 = [];
+            cars2[0] = "Shev";
+            cars2[1] = "Ford";
+            cars2[2] = "Fiat";
+            const cars3 = new Array("Mat","BYD","Zekre");
+            const cars4 = ["Buggati","Wols","Xui"];
+            cars4[1] = "Opel";
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demox").innerHTML = fruits;
+            fruits[6] = "Lemon";
+            let emptytext = "";
+            for (i = 0; i < emptytext; i++) {
+                emptytext += fruits[i] + "<br>";
+            }
+            const person = ["Kot", "Do", 46];
+            let size = fruits.length;
+            let flen = fruits.length;
+            let text = "<ul>";
+                for (let i = 0; i < flen; i++) {
+                    emptytext += "<li>" + fruits[i] + "</li>";
+                }
+                text += "</ul>";
+            let text1 = "<ul>";
+                fruits.forEach(myFunction);
+                text += "</ul>";
+            function myFunction(value) {
+                text1 += "<li>" + value + "</li>";
+            }
+            function myFunctions () {
+                fruits.push("Lemon");
+                document.getElementById("demox").innerHTML = fruits;
+            }
+            let x = "";
+            const myObj = {
+                name: "John",
+                age: 35,
+                cars: [
+                    {name: "Ford", model:["Fiesta", "Focus","Mustang"]},
+                    {name: "BMW", model:["320","X3","X5"]},
+                    {name: "Fiat", model:["500","Panda"]}
+                ]
+            }
+            for (let i in myObj.cars) {
+                x += "<h2>" + myObj.cars[i].name + "</h2>";
+                for (let j in myObj.cars[i].model) {
+                    x += myObj.cars[i].model[j] + "<br>";
+                }
+            }
+            document.getElementById("demo").innerHTML = cars;
+            document.getElementById("demo1").innerHTML = cars1;
+            document.getElementById("demo2").innerHTML = cars2;
+            document.getElementById("demo3").innerHTML = cars3;
+            document.getElementById("demo4").innerHTML = cars4[0];
+            document.getElementById("demo5").innerHTML = cars4;
+            document.getElementById("demo6").innerHTML = fruits.toString();
+            document.getElementById("demo7").innerHTML = person[0];
+            document.getElementById("demo8").innerHTML = size;
+            document.getElementById("demo9").innerHTML = fruits[fruits.length-1];
+            document.getElementById("demo10").innerHTML = text;
+            document.getElementById("demo11").innerHTML = text1;
+            document.getElementById("demo12").innerHTML = emptytext;
+            document.getElementById("demo13").innerHTML = typeof fruits;
+            document.getElementById("demo14").innerHTML  = Array.isArray(fruits);
+            document.getElementById("demo15").innerHTML = "Array: " + (fruits instanceof Array);
+            document.getElementById("demo16").innerHTML = x;
+        </script>
+    </body>
+</html>

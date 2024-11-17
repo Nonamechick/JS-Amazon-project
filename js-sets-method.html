@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Sets Methods</title>
+        <style>
+            body {
+                background-color: aliceblue;
+                color: black;
+                border: 2vb solid black;
+                padding: 5cap;
+                margin: 5cap;
+                border-radius: 5vb;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Sets Methods</h1>
+        <h2>The has() Method</h2>
+        <p>The has() method returns true if a set contains a spefic value:</p>
+        <p id="1"></p>
+        <h2>The forEach() Method</h2>
+        <p>forEach() calls a function for each element in a Set:</p>
+        <p id="2"></p>
+        <h2>The values() Method</h2>
+        <p>The values() method returns an Iterator object with all the values in a Set.</p>
+        <p id="3"></p>
+        <h2>The keys() Method</h2>
+        <p>The keys() method returns a Set Iterator with all the values from a Set.</p>
+        <p id="4"></p>
+        <h2>The entries() Method</h2>
+        <p>The entries() method returns an Iterator with [value,value] pairs from a Set:</p>
+        <p id="5"></p>
+
+        <script>
+            const letters = new Set(["A","B","C"]);
+            answer = letters.has("D");
+            document.getElementById("1").innerHTML = "The answer is " + answer;
+            let text = "";
+            letters.forEach (function(value) {
+                text += value + "<br>"
+            })
+            document.getElementById("2").innerHTML = text;
+            const myIterator = letters.values();
+            let text1 = "";
+            for (const x of myIterator) {
+                text1+= x + "<br>";
+            }
+            document.getElementById("3").innerHTML = text1;
+            const myIterator1 = letters.keys();
+            let text2 ="";
+            for (const x of myIterator1) {
+                text2+= x + "<br>";
+            }
+            document.getElementById("4").innerHTML = text2;
+            const iterator = letters.entries();
+            let text3 = "";
+            for (const entry of iterator) {
+                text3 += entry + "<br>";
+            }
+            document.getElementById("5").innerHTML = text3;
+        </script>
+    </body>
+</html>

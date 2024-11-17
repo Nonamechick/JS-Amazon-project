@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Iterables</title>
+        <style>
+            body {
+                background-color: bisque;
+                color: black;
+                border: 1cqi solid black;
+                padding: 1cqi;
+                margin: 1cqi;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Iterables</h1>
+        <h2>Iterate over a String</h2>
+        <p id="1"></p>
+        <h2>Iterate over an Array</h2>
+        <p id="2"></p>
+
+
+        <script>
+            const name = "Curse";
+            const letters = ["n", "i", "g", "g","a"];
+            let text = "";
+            let txt = "";
+            for (const x of name) {
+                text += x + "<br>";
+            }
+            document.getElementById("1").innerHTML = text;
+            for (const x of letters) {
+                txt += x + "<br>";
+            }
+            document.getElementById("2").innerHTML = txt;
+        </script>
+    </body>
+</html>

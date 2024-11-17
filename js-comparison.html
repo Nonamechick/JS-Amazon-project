@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Comparison
+        </title>
+        <style>
+            body {
+                background-color: darkgrey;
+                border: 1vmax solid black;
+                color: black;
+                padding: 1cqh;
+                margin: 1cqmax;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Comparison</h1>
+        <h2>The () ? : Ternary Operator</h2>
+        <p> Input your age and Click the button</p>
+        <input id="age" value="198" />
+        <button onclick="myFunc()">Try it</button>
+        <p id="1"></p>
+        <h2>The ?? Operator</h2>
+        <p>The ?? Operator returns the first argument if it is not nullish (null or udefined). Otherwise it returns the second</p>
+        <p id="2"></p>
+        <h2>The ?. Operator</h2>
+        <p>The ?. Operator returns undefined if an object is undefined or null (instead of throwing an error) </p>
+        <p>Car name is</p>
+        <p id="3"></p>
+
+        <script>
+            function myFunc() {
+                let age = document.getElementById("age").value;
+                let votable = (age < 18) ? "Too young" : "Old enough";
+                document.getElementById("1").innerHTML = votable + " to vote.";
+            }
+            let name = null;
+            let text = "missing";
+            let result = name ?? text;
+            document.getElementById("2").innerHTML = "The name is " + result;
+            const car = {type:"Fiat",model:"100",color: "black"};
+            let name1 = car?.name1;
+            document.getElementById("3").innerHTML = name1; 
+        </script>
+    </body>
+</html>

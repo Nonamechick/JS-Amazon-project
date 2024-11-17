@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data get Method</title>
+        <style>
+            body {
+                background-color: aliceblue;
+                color: black;
+                border: 5px solid black;
+                padding: 1rem;
+                margin: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Dates</h1>
+        <h2>The getFullYear() Method</h2>
+        <p>Return the full year of a date object:</p>
+        <p id="1"></p>
+        <h2>The getMonth() Method</h2>
+        <p>Return the month of a date as a number from 0 to 11</p>
+        <p>To get the correct month number, you must add 1:</p>
+        <p id="2"></p>
+        <h2>JS getMonth()</h2>
+        <p>Return the month as a number</p>
+        <p>You can use an array of names to return the month as a name:</p>
+        <p id="3"></p>
+        <h2>The getDate() Method</h2>
+        <p>Return the day of a date as a number (1-31)</p>
+        <p id="4"></p>
+        <h2>The getHours() Method</h2>
+        <p>Return the hours of a date as a number (0-23)</p>
+        <p id="5"></p>
+        <h2>The getMinutes() Method</h2>
+        <p>Returns the minutes of a date as a number (0-59)</p>
+        <p id="6"></p>
+        <h2>The getSeconds() Method</h2>
+        <p>Return the seconds of a date as a number (0-59)</p>
+        <p id="7"></p>
+        <h2>The getMilliseconds() Method</h2>
+        <p>Return the milliseconds of a date as a number (0-999)</p>
+        <p id="8"></p>
+        <h2>The getDay() Method</h2>
+        <p>Return the weekday as a number</p>
+        <p id="9"></p>
+        <h2>The getDay() Method</h2>
+        <p>Return the weekday as a number </p>
+        <p>You can use an array of names to return the weekday as a name</p>
+        <p id="10"></p>
+        <h2>The getTime() Method</h2>
+        <p></p>
+        <p>Return the number of milliseconds since midnight January 1, 1970</p>
+        <p id="11"></p>
+        <h2>Using Date.now()</h2>
+        <p>Calculate the number of years since January 1,1970:</p>
+        <p id="12"></p>
+        <h2>The getTimezoneOffset() Method</h2>
+        <p>The time zone difference in minutes is:</p>
+        <p id="13"></p>
+        <script>
+            const d = new Date();
+            document.getElementById("1").innerHTML = d.getFullYear();
+            document.getElementById("2").innerHTML = d.getMonth() + 1;
+
+            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            let month = months[d.getMonth()];
+            document.getElementById("3").innerHTML = month;
+            const o = new Date();
+            document.getElementById("4").innerHTML = d.getDate();
+            document.getElementById("5").innerHTML = d.getHours();
+            document.getElementById("6").innerHTML = d.getMinutes();
+            document.getElementById("7").innerHTML = d.getSeconds();
+            document.getElementById("8").innerHTML = d.getMilliseconds();
+            document.getElementById("9").innerHTML = d.getDay();
+            const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            let day = days[d.getDay()];
+            document.getElementById("10").innerHTML = day;
+            document.getElementById("11").innerHTML = d.getTime();
+            const minute = 1000 * 60;
+            const hour = minute * 60;
+            const day1 = hour * 24;
+            const year = day1 * 365;
+
+            let years = Math.round(Date.now() / year);
+            document.getElementById("12").innerHTML = years;
+            document.getElementById("13").innerHTML = d.getTimezoneOffset();
+        </script>
+    </body>
+</html>

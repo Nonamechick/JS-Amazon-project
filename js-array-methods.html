@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Array Methods 
+        </title>
+        <style>
+            body {
+                background-color: blanchedalmond;
+                padding: 1rem;
+                margin: 1rem;
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Array Methods</h1>
+        <h2>The at() Method</h2>
+        <p>The at() method returns an indexed element from an array:</p>
+        <p id="demo"></p>
+        <h2>Bracket Notation</h2>
+        <p>The bracket notation [] returns an indexed element from an array:</p>
+        <p id="demo1"></p>
+        <h2>The join() Method</h2>
+        <p>The join() method joins array elements into a string.</p>
+        <p>It this example we have used " * " as a separator between the elements:</p>
+        <p id="demo2"></p>
+        <h2>The pop() Method</h2>
+        <p>The pop() method removes the last element from an array.</p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <h2>The join() Method</h2>
+        <p>The join() method joins array elements into a string.</p>
+        <p id="demo5"></p>
+        <h2>The shift() Method</h2>
+        <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left)</p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <h2>The unshift() Method</h2>
+        <p>The unshift() method adds new elements to the beginning of an array:</p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        <h2>Bracket Indexing</h2>
+        <p id="demo10"></p>
+        <p id="demo11"></p>
+        <h2>The length Property</h2>
+        <p>The length Property provides an easy way to append new elements to an array without using the push() method:</p>
+        <p id="demo12"></p>
+        <p id="demo13"></p>
+        <h2>The delete Method</h2>
+        <p>Deleting elements leaves undefined holes in an array:</p>
+        <p id="demo14"></p>
+        <p id="demo15"></p>
+        <h2>The concat() Method</h2>
+        <p>The concat() method merges (concatenates) arrays:</p>
+        <p id="demo16"></p>
+        <p id="demo17"></p>
+        <p id="demo18"></p>
+        <h2>The copyWith() Method</h2>
+        <p>copyWith() copies array elements to another position in an array, overwriting existing values:</p>
+        <p>Copy to index 2, all elements from index 0:</p>
+        <p id="demo19"></p>
+        <p id="demo20"></p>
+        <h2>The flat() Method</h2>
+        <p id="demo21"></p>
+        <h2>The flatMap() Method</h2>
+        <p id="demo22"></p>
+        <h2>The splice() Method</h2>
+        <p>The splice() method adds new elements to an array:</p>
+        <p id="demo23"></p>
+        <p id="demo24"></p>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let fruit = fruits.at(2);
+            let fruit1 = fruits[2];
+            
+            // Correct array declarations
+            const girls = ["Nat", "No"];
+            const boys = ["Hell no", "No"];
+            const children = girls.concat(boys);
+
+            // Move this part after array2 declaration
+            const array1 = ["Cecilie", "Lone"];
+            const array2 = ["Emil", "Tobias", "Linus"];
+            const array3 = ["Robin", "Morgan"];
+            const myChildren = array1.concat(array2, array3);
+            const mychild = array2.concat("Peter");
+            const fruits1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
+            const myArr = [[1,2], [3,4], [5,6]];
+            const newArr = myArr.flat();
+            const myArr1 = [1,2,3,4,5,6];
+            const newArr1 = myArr1.flatMap(x => [x, x * 10]);
+            document.getElementById("demo").innerHTML = fruit;
+            document.getElementById("demo1").innerHTML = fruit1;
+            document.getElementById("demo2").innerHTML = fruits.join(" * ");
+            document.getElementById("demo3").innerHTML = fruits;
+            fruits.pop();
+            document.getElementById("demo4").innerHTML = fruits;
+            document.getElementById("demo5").innerHTML = fruits.join(" * ");
+            document.getElementById("demo6").innerHTML = fruits.shift();
+            document.getElementById("demo7").innerHTML = fruits;
+            document.getElementById("demo8").innerHTML = fruits;
+            fruits.unshift("Lemon");
+            document.getElementById("demo9").innerHTML = fruits;
+            document.getElementById("demo10").innerHTML = fruits;
+            fruits[0] = "Kiwi";
+            document.getElementById("demo11").innerHTML = fruits;
+            document.getElementById("demo12").innerHTML = fruits;
+            fruits[fruits.length] = "Kiwi";
+            document.getElementById("demo13").innerHTML = fruits;
+            document.getElementById("demo14").innerHTML = "The first fruit is: " + fruits[0];
+            delete fruits[0];
+            document.getElementById("demo15").innerHTML = "The first fruit is: " + fruits[0];
+            document.getElementById("demo16").innerHTML = children;
+            document.getElementById("demo17").innerHTML = myChildren;
+            document.getElementById("demo18").innerHTML = mychild;
+            document.getElementById("demo19").innerHTML = fruits.copyWithin(2,0);
+            document.getElementById("demo20").innerHTML = fruits1.copyWithin(2,0,2);
+            document.getElementById("demo21").innerHTML = newArr;
+            document.getElementById("demo22").innerHTML = newArr1;
+            document.getElementById("demo23").innerHTML = fruits1;
+            fruits1.splice(2,0, "Lemon", "Kiwi");
+            document.getElementById("demo24").innerHTML = fruits1;
+        </script>
+    </body>
+</html>
