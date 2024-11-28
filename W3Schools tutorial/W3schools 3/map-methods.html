@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map Methods</title>
+        <style>
+            body {
+                text-align: center;
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Maps Methods</h1>
+        <h2>The new Map Method()</h2>
+        <p>Creating a map from an array:</p>
+        <p id="1"></p>
+        <p id="2"></p>
+        <h2>The size property</h2>
+        <p id="3"></p>
+        <h2>The has() method</h2>
+        <p id="4"></p>
+        <h2>The forEach() Method</h2>
+        <p id="5"></p>
+        <h2>The entries() Method</h2>
+        <p id="6"></p>
+        <h2>The keys() Method</h2>
+        <p id="7"></p>
+        <h2>The values() Method</h2>
+        <p id="8"></p>
+        <script>
+            const fruits = new Map ([
+              ["apples", 500],
+              ["bananas", 300],
+              ["oranges", 200]
+            ]);
+            let numb = fruits.get("apples");
+            document.getElementById("1").innerHTML = "There are " + numb + "apples";
+            fruits.set('kiwi',900);
+            let set = fruits.get("kiwi");
+            document.getElementById("2").innerHTML = "The kiwi "+set;
+            document.getElementById("3").innerHTML = fruits.size;
+            document.getElementById("4").innerHTML = fruits.has("kiwi");
+            let text = "";
+            fruits.forEach((value,key)=>{
+                text+=key+' = '+value+"<br>" 
+            });
+            document.getElementById("5").innerHTML = text;
+            let nottext = "";
+            for (const x of fruits.entries()) {
+                nottext +=x+"<br>";
+            }
+            document.getElementById("6").innerHTML = nottext;
+            let anothertext = "";
+            for (const x of fruits.keys()) {
+                anothertext+=x+"<br>";
+            }
+            document.getElementById("7").innerHTML =anothertext;
+            let alsotext = "";
+            for(const x of fruits.values()) {
+                alsotext+=x+"<br>";
+            }
+            document.getElementById("8").innerHTML = alsotext;
+        </script>
+    </body>
+</html>
