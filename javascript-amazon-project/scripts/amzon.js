@@ -78,6 +78,8 @@ products.forEach((product)=> {
             </select>
           </div>
 
+          ${product.extraInfoHTML()}
+
           <div class="product-spacer"></div>
 
           <div class="added-to-cart">
@@ -91,7 +93,7 @@ products.forEach((product)=> {
     </div>
     `;
 });
-console.log(productsHTML);
+//console.log(productsHTML);
 
  document.querySelector('.js-products-grid')
  .innerHTML=productsHTML;
