@@ -18,10 +18,10 @@ Zero Dependencies: No React, Bootstrap, etc.
 ```
 
 ## 🖥️ Screenshots  
-![Homepage](https://i.postimg.cc/...)  
+![Homepage](I'am too lazy to add screenshots) 
 *Amazon-style homepage with product grid*  
 
-![Cart](https://i.postimg.cc/...)  
+![Cart](I'am too lazy to add screenshots)  
 *Interactive cart with real-time price updates*  
 
 ## 🚀 How to Run  
